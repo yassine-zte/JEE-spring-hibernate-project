@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+   <!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+   <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/maventelgest</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping class="com.gestel.applicagestel.model.Departement"/>
+    <mapping class="com.gestel.applicagestel.model.Sim"/>
+    <mapping class="com.gestel.applicagestel.model.Employee"/>
+    <mapping class="com.gestel.applicagestel.model.Phone"/>
+    <mapping class="com.gestel.applicagestel.model.Service"/>-->
+    <!---->
+    <!-- We're using MySQL database so the dialect needs to MySQL as well-->
+ <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <!-- Enable this to see the SQL statements in the logs-->
+    <property name="show_sql">true</property>
+   
+    <!-- This will drop our existing database and re-create a new one.
+    		Existing data will be deleted! -->
+    <!--<property name="hbm2ddl.auto">create</property>-->
+    <mapping class="com.gestel.applicagestel.model.Employee" />
+    <mapping class="com.gestel.applicagestel.model.Departement" />
+    <mapping class="com.gestel.applicagestel.model.Phone" />
+    <mapping class="com.gestel.applicagestel.model.Service" />
+    <mapping class="com.gestel.applicagestel.model.Sim" />
+  </session-factory>
+</hibernate-configuration>
